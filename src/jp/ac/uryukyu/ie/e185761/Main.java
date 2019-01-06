@@ -10,11 +10,23 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("jp/ac/uryukyu/ie/e185761/sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
 
+
+        Maze maze=new Maze();
+
+        maze.CreateMaze(99,99);
+        for(int y=0;y<99;y++){
+            for(int x=0;x<99;x++){
+                if(maze.GetMaze()[y][x]==1)System.out.print("＠");
+                else
+                    System.out.print("　");
+            }
+            System.out.println();
+        }
      }
 
 
