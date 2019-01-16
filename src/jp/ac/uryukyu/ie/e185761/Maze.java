@@ -6,30 +6,6 @@ public class Maze {
     int mazeWidth;
     int mazeHeight;
 
-    class mazeCoord {
-        int x;
-        int y;
-
-        mazeCoord(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        public void Set(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (o == this) return true;
-            if (o.getClass() != this.getClass()) return false;
-
-            mazeCoord coord = (mazeCoord) o;
-            return x == coord.x && y == coord.y;
-        }
-    }
-
     private int[][] mazeInfo;
 
     //壁が伸びていない柱のリスト
@@ -37,6 +13,12 @@ public class Maze {
     //探索中の柱のスタック
     private Deque<mazeCoord> paths = new LinkedList<mazeCoord>();
 
+    /**
+     * 迷路を作成
+     * サイズは一辺が3以上の奇数にしなければならない
+     * @param width
+     * @param height
+     */
     public void CreateMaze(int width, int height) {
         mazeWidth = width;
         mazeHeight = height;
@@ -45,8 +27,6 @@ public class Maze {
 
         //探索されていない柱がなくなるまで探索を繰り返す
         while (nodes.size() > 0) {
-            System.out.println(nodes.size());
-
             chooseNode(nodes.get(new Random().nextInt(nodes.size())));
         }
     }
@@ -62,13 +42,13 @@ public class Maze {
             }
         }
 
-        for (int j = 0; j < mazeHeight; j++) {
+        for (int j = 0; j < mazeWidth; j++) {
             mazeInfo[0][j] = 1;
-            mazeInfo[mazeWidth - 1][j] = 1;
+            mazeInfo[mazeHeight - 1][j] = 1;
         }
-        for (int i = 0; i < mazeWidth; i++) {
+        for (int i = 0; i < mazeHeight; i++) {
             mazeInfo[i][0] = 1;
-            mazeInfo[i][mazeHeight - 1] = 1;
+            mazeInfo[i][mazeWidth - 1] = 1;
         }
     }
 
@@ -113,6 +93,10 @@ public class Maze {
         }
     }
 
+    /**
+     * 迷路情報を取得
+     * @return　迷路の配列
+     */
     public int[][] GetMaze() {
         return mazeInfo;
     }
