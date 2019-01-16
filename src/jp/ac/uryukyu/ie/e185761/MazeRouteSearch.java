@@ -66,6 +66,9 @@ public class MazeRouteSearch {
         CloseList.add(baseNode);
 
         if (baseNode.pos.equals(mGoalPos)) return true;
+
+        //OpenListがなくなった時点で探索失敗とし探索を終了する
+        if(OpenList.size()==0)return true;
         return false;
     }
 

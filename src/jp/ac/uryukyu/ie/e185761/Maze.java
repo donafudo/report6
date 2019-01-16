@@ -16,10 +16,14 @@ public class Maze {
     /**
      * 迷路を作成
      * サイズは一辺が3以上の奇数にしなければならない
+     *
      * @param width
      * @param height
      */
-    public void CreateMaze(int width, int height) {
+    public void CreateMaze(int width, int height) throws IllegalAccessException {
+        if (width < 3 || height < 3) throw new IllegalAccessException();
+        if ((width * height) % 2 == 0) throw new IllegalAccessException();
+
         mazeWidth = width;
         mazeHeight = height;
 
@@ -95,6 +99,7 @@ public class Maze {
 
     /**
      * 迷路情報を取得
+     *
      * @return　迷路の配列
      */
     public int[][] GetMaze() {
