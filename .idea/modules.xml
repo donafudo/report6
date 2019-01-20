@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mazeProject.iml" filepath="$PROJECT_DIR$/.idea/modules/mazeProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mazeProject_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mazeProject_main.iml" group="mazeProject" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mazeProject_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mazeProject_test.iml" group="mazeProject" />
       <module fileurl="file://$PROJECT_DIR$/report6.iml" filepath="$PROJECT_DIR$/report6.iml" />
     </modules>
   </component>

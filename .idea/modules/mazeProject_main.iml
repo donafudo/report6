@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="mazeProject:main" external.linked.project.path="$MODULE_DIR$/../../mazeProject" external.root.project.path="$MODULE_DIR$/../../mazeProject" external.system.id="GRADLE" external.system.module.group="report6" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_10">
+    <output url="file://$MODULE_DIR$/../../mazeProject/out/production/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../mazeProject/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../mazeProject/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../mazeProject/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
