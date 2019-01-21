@@ -9,8 +9,8 @@ public class Main  {
 
 
 
-        int sizeX = 101;
-        int sizeY = 101;
+        int sizeX = 31;
+        int sizeY = 31;
 
         Maze maze = new Maze();
         maze.CreateMaze(sizeX, sizeY);

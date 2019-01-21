@@ -22,8 +22,8 @@ public class Main extends Application {
         primaryStage.show();
 
 
-        int sizeX = 5;
-        int sizeY = 5;
+        int sizeX = 51;
+        int sizeY = 51;
 
         Maze maze = new Maze();
         maze.CreateMaze(sizeX, sizeY);

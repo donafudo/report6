@@ -64,7 +64,7 @@ public class MazeRouteSearch {
             }
         }
 
-        //探索し終わったbaseNodeをcloseListに追加
+        //探索し終わったbaseNodeをCloseListに追加
         OpenList.remove(baseNode);
         CloseList.add(baseNode);
 
